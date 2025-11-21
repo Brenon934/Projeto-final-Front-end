@@ -1,0 +1,320 @@
+/* pagina */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: #e2e6f0;
+}
+
+/* cabeçalho da page */
+
+header {
+    background: #0d1224;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #1f2b50;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
+}
+
+.logo img {
+    width: 120px;
+    margin-right: 5px;
+    border-radius: 10px;   
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0cqmin;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    color: #6ab1ff;
+    text-shadow: 0 0 8px #005eff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bcd4ff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #6ab1ff;
+    text-shadow: 0 0 6px #005eff;
+}
+
+/* aba de "buscar" e botao */
+
+.buscar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buscar input {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #1c2541;
+    color: #fff;
+}
+
+.buscar button {
+    padding: 8px 12px;
+    border: none;
+    background: #005eff;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buscar button:hover {
+    background: #003ea8;
+}
+
+/* parte do banner e conteudos das pages*/
+
+.conteudo {
+    padding-top: 150px;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #003ea8;
+}
+
+/* parte dos produtos */
+
+.amostra {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.containner {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-produto {
+    background: #141a2e;
+    padding: 20px;
+    border-radius: 14px;
+    width: 250px;
+    box-shadow: 0 0 15px rgba(0, 80, 255, 0.2);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card-produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(0, 80, 255, 0.5);
+}
+
+.card-img img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-produto h3 {
+    margin: 15px 0;
+    color: #6ab1ff;
+}
+
+.card-produto .preco {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #9fe8ff;
+}
+
+.card-produto button {
+    background: #005eff;
+    border: none;
+    padding: 10px 16px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-produto button:hover {
+    background: #003ea8;
+}
+
+/* avaliações e comentarios */
+
+.avaliacoes {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.avaliacoes h2 {
+    color: #9fe8ff;
+}
+
+.avaliacao {
+    background: #141a2e;
+    padding: 25px;
+    border-radius: 12px;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 80, 255, 0.3);
+}
+
+/* rodape da pag */
+
+footer {
+    margin-top: 40px;
+    background: #0d1224;
+    text-align: center;
+    padding: 20px;
+    color: #bcd4ff;
+}
+
+footer .redes-sociais img {
+    margin: 10px;
+    transition: 0.3s;
+}
+
+footer .redes-sociais img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px #005eff);
+}
+
+.redes-sociais img {
+    border-radius: 13px;
+}
+
+/* parte dos formularios e cadastro de produtos */
+
+form {
+    background: #141a2e;
+    padding: 25px;
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 80, 255, 0.2);
+}
+
+form legend {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #6ab1ff;
+    text-align: center;
+}
+
+form label {
+    color: #9fe8ff;
+    font-weight: 500;
+}
+
+form input, 
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: none;
+    background: #1c2541;
+    color: #fff;
+    border-radius: 8px;
+}
+
+form button {
+    width: 100%;
+    background: #005eff;
+    border: none;
+    padding: 12px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #003ea8;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+#prodcadastrados div {
+    background: #141a2e;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0,80,255,0.2);
+}
+
+h3 {
+    text-align: center;
+    color: #9fe8ff;
+    margin-top: 20px;
+}
+
+
+/* responsividade da page */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    header {
+        text-align: center;
+        gap: 20px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .avaliacao {
+        width: 95%;
+    }
+
+    .card-produto {
+        width: 90%;
+    }
+}
