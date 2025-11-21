@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto</title>
+      <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+
+        <!--Cabeçalho com Home-->
+
+        <div class="logo">
+            <img src="../img/logo techworld.png" alt="Logo TechWorld">
+            <h1>TechWorld</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+
+    <!--Formulario de cadastro de Produtos-->
+
+    <main class="conteudo">
+     <h3>Cadastre seus Produtos:</h3>
+     <div class="form-container">      
+         <form id="formProduto">
+        
+        <label>Nome do Produto:</label><br>
+        <input type="text" id="nome"><br>
+        
+        <label>Categoria:</label><br>
+        <select id="categoria" >
+            <option value="">Selecione</option>
+            <option value="Smartphones">Smartphones</option>
+            <option value="Smart TVs">Smart TVs</option>
+            <option value="otebooks">Notebooks</option>
+            <option value="Video Games">Video Games</option>
+        </select><br>
+        
+        <label>Preço (R$):</label><br>
+        <input type="number" id="preco" step="0.01" min="0" ><br>
+        
+        <label>Quantidade:</label><br>
+        <input type="number" id="quantidade" min="1" ><br>
+        
+        <label>Descrição:</label><br>
+        <input type="text" id="descricao" ><br>
+        
+        <label>Imagem do Produto:</label><br>
+        <input type="file" id="imagem" accept="image/*"><br>
+        
+        <button type="button" onclick="mostrarprod()">Cadastrar Produto</button>
+        
+    </form>
+     </div><br>
+     <p><strong>PRODUTOS CADASTRADOS:</strong></p>
+     <p id="prodcadastrados"></p><br><br>
+     
+    <script>
+        function mostrarprod(){
+            //obter valores
+            let nome = document.getElementById("nome").value;
+            let categoria = document.getElementById("categoria").value;
+            let preco = parseFloat(document.getElementById("preco").value);
+            let quantidade = parseInt(document.getElementById("quantidade").value);
+            let descricao = document.getElementById("descricao").value;
+            
+            //validção 
+            if (nome === "" || categoria === "" || isNaN(preco) || preco <= 0 || isNaN(quantidade) || quantidade <= 0) {
+                document.getElementById("prodcadastrados").textContent = "Por favor, preencha todos os campos corretamente";
+                return;
+            }
+            
+            let listaProdutos = document.getElementById("prodcadastrados");
+            listaProdutos.innerHTML += `
+                <div>
+                    <strong>${nome}</strong><br> - ${categoria} - R$ ${preco.toFixed(2)} - Quantidade: ${quantidade}<br>
+                    ${descricao}
+                </div>
+                <hr>
+            `;
+
+            // Limpar os campos após cadastro
+            document.getElementById("formProduto").reset();
+        }
+    </script>
+    </main>
+    <br><br>
+
+    <!--rodape-->
+
+    <footer>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/" target="_blank"><img src="..//img/instagram icon.png" alt="Instagram" width="40"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="..//img/youtube icon.png" alt="Youtube" width="40"></a></a>
+            <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fpt-BR%2F&lang=en&enter_method=mandatory" target="_blank"><img src="..//img/tiktok icon.png" alt="Tik Tok" width="40"></a></a>
+        </div>
+         <p>CNPJ: 00.000.000/0000-00 | Endereço: Av. dos DF, quadra 00 lote B - Brasília, DF | Contato: (00) 4002-8922</p>
+        <p>© 2025 TechWorld -Todos os direitos reservados.</p>
+        <P>Site Fictício desenvolvido na Disciplina front end  UDF-Centro Univertário</P>
+      </footer>
+</body>
+</html>
